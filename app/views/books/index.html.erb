@@ -1,0 +1,10 @@
+<h1>Popular Fiction Titles at the Chicago Public Library in 2014</h1>
+
+<% @books.each do |title| %>
+  <%= title["rank"] %>. 
+  <b><%= title["title"].upcase %></b><br>
+  Author: <%= title["author"] %><br>
+  Published: <%= title["pub_year"] %><br>
+  <a href="<%= title["catalog_record"] %>">Catalog Record</a><br><br>
+<% end %>
+
